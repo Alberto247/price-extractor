@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py  # Adjust based on your Flask app entry point
+      - FLASK_ENV=development  # Set to production for production builds
